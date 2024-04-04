@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/listAnimeFragment"
-        android:name="com.example.newstories.ListAnimeFragment"
+        android:name="com.example.projectanime.presentation.fragment.ListAnimeFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" />
 </navigation>

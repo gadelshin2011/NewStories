@@ -1,4 +1,4 @@
-package com.example.newstories
+package com.example.projectanime
 
 import org.junit.Test
 

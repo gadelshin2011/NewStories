@@ -1,4 +1,4 @@
-package com.example.newstories
+package com.example.projectanime.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
