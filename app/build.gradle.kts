@@ -47,12 +47,32 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+    //Navigation
     val nav_version = ("2.7.7")
     implementation ("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation ("androidx.navigation:navigation-ui-ktx:$nav_version")
     // Feature module Support
     implementation ("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
-
     // Testing Navigation
     androidTestImplementation ("androidx.navigation:navigation-testing:$nav_version")
+
+    //network components
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.7.2")
+    implementation ("com.squareup.okhttp3:okhttp:4.7.2")
+
+    //Glide
+    implementation ("com.github.bumptech.glide:glide:4.15.1")
+
+    //RecycleView
+    implementation ("androidx.recyclerview:recyclerview:1.3.2")
+
+    //CardView
+    implementation ("androidx.cardview:cardview:1.0.0")
+
+    //dataStore
+    implementation ("androidx.datastore:datastore-preferences:1.0.0")
+
+
 }
