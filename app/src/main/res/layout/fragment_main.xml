@@ -6,13 +6,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_margin="5dp"
-    tools:context=".ListAnimeFragment">
+    tools:context=".presentation.fragment.ListAnimeFragment">
 
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/ListAnimeSearch" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rc_viewListAnime"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/rcview_item_anime"
         />
 </LinearLayout>

@@ -1,6 +1,6 @@
 package com.example.projectanime.data.remote.model
 
-data class ModelListAnime(
+data class ListAnimeModel(
     val code: String,
     val id: Int,
     val names: Names,
@@ -9,5 +9,4 @@ data class ModelListAnime(
     val posters: Posters,
     val updated: Int,
     val last_change: Int
-
 )
