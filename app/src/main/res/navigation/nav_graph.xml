@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/listAnimeFragment">
-
     <fragment
         android:id="@+id/listAnimeFragment"
-        android:name="com.example.projectanime.presentation.fragment.ListAnimeFragment"
+        android:name="com.example.projectAnime.presentation.fragment.ListAnimeFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" />
 </navigation>

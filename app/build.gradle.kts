@@ -1,14 +1,15 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id ("kotlin-parcelize")
 }
 
 android {
-    namespace = "com.example.projectanime"
+    namespace = "com.example.projectAnime"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.projectanime"
+        applicationId = "com.example.projectAnime"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
