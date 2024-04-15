@@ -29,7 +29,6 @@ class AnimeViewModel(apl: Application) : AndroidViewModel(apl) {
             val result = webRepo.retrofit.getListAnime()
                 _animeList.value = result.body()!!.list
             }
-
         }
     }
 
