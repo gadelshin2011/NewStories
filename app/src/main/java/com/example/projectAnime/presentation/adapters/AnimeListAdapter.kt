@@ -23,12 +23,12 @@ class AnimeListAdapter : RecyclerView.Adapter<AnimeListAdapter.MyHolder>() {
             setName(animeModel.names)
         }
 
-        private fun setPoster(posters: Posters) {
-            Glide.with(itemView.context).load(posters.small).into(binding.imageView2)
+        private fun setPoster(posters: Map<String, Posters>) {
+            Glide.with(itemView.context).load(posters["medium"]).into(binding.imageView2)
         }
 
-        private fun setName(names: Names) {
-            binding.textView.text = names.ru
+        private fun setName(names: Map<String, String>) {
+            binding.textView.text = names["ru"]
         }
     }
 
@@ -49,11 +49,8 @@ class AnimeListAdapter : RecyclerView.Adapter<AnimeListAdapter.MyHolder>() {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setAnimeList(list: List<ListAnimeModel>?) {
-     //   listItem.clear()
-        if (list != null) {
-            listItem.addAll(list)
-        }
+    fun setAnimeList(list: List<ListAnimeModel>) {
+        listItem.addAll(list)
         notifyDataSetChanged()
     }
 

@@ -1,10 +1,13 @@
 package com.example.projectAnime.presentation.viewModel
 
+import android.annotation.SuppressLint
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.projectAnime.data.remote.RetrofitClient
 import com.example.projectAnime.data.remote.model.ListAnimeModel
+import com.example.projectAnime.data.remote.model.MainModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -25,9 +28,9 @@ class AnimeViewModel(apl: Application) : AndroidViewModel(apl) {
     }
 
     suspend fun requestAnimeList() {
-        CoroutineScope(Dispatchers.IO).launch {
+        viewModelScope.launch {
             val result = webRepo.retrofit.getListAnime()
-                _animeList.value = result.body()!!.list
+            result.body()
             }
         }
     }
